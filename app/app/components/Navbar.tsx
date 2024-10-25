@@ -16,6 +16,12 @@ const Navbar: React.FC = () => {
         <li onClick={():void=>{
           window.location.href = '/';
         }} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
+          <li onClick={():void=>{
+          window.location.href = '/projects';
+        }} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
+        <li onClick={():void=>{
+          window.location.href = '/about';
+        }} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
         <li className="cursor-pointer hover:font-bold transition-all">
           <button
             onClick={():void=>{
