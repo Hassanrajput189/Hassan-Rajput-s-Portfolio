@@ -41,7 +41,7 @@ const Projects = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center my-16">
         <div className="max-h-screen w-[80vw]">
           <div className="flex flex-wrap justify-center items-center gap-20 flex-grow">
             {projects.map((project, index) => (
