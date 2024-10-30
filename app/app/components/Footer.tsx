@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div className="flex flex-col justify-center items-center w-full py-1 text-sm bg-gray-200 absolute bottom-0">
+        <div className="flex flex-col justify-center items-center w-full py-1 text-sm bg-gray-200">
             <div>
                 <span>© 2024 Muhammad Hassan Rajput. All rights reserved.</span>
             </div>

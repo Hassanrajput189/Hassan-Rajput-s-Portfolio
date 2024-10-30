@@ -35,30 +35,31 @@ const projects = [
     tech: ["React", "Node", "Next"],
     url: "https://github.com/Hassanrajput189/Spotify-clone.git"
   },
+  
 ];
 
 const Projects = () => {
   return (
-    <div>
-      <Navbar />
-      <div className="flex justify-center items-center my-16">
-        <div className="max-h-screen w-[80vw]">
-          <div className="flex flex-wrap justify-center items-center gap-20 flex-grow">
-            {projects.map((project, index) => (
-              <Card
-                onClick={() => handleNavigation(project.url)}
-                key={index}
-                image={project.image}
-                name={project.name}
-                desc={project.desc}
-                tech={project.tech}
-              />
-            ))}
-          </div>
+    <div className="flex flex-col min-h-screen">
+    <Navbar />
+    <div className="flex flex-col items-center flex-grow my-16">
+      <div className="max-w-[80vw]">
+        <div className="flex flex-wrap justify-center items-center gap-20">
+          {projects.map((project, index) => (
+            <Card
+              onClick={() => handleNavigation(project.url)}
+              key={index}
+              image={project.image}
+              name={project.name}
+              desc={project.desc}
+              tech={project.tech}
+            />
+          ))}
         </div>
       </div>
-      <Footer />
     </div>
+    <Footer />
+  </div>
   );
 };
 
