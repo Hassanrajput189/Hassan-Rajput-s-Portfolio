@@ -8,8 +8,7 @@ const Footer = () => {
                 <div className="flex items-center justify-center">
                     <span>Created with</span>
                     <img width={30} className="mx-1" src="/heart.png" alt="heart icon" />
-                    <span>by&nbsp;</span>
-                    <p className="font-bold text-blue-600">Hassan Rajput</p>
+                    <span>by Hassan Rajput</span>      
                 </div>
 
             </div>

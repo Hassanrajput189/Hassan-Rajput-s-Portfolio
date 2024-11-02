@@ -11,16 +11,16 @@ const Info = () => {
       </div>
       <ul id='socials' className='flex  items-center gap-6'>
         <li className='hover:shadow-2xl rounded-full cursor-pointer transition duration-300 ease-in-out transform hover:scale-110'>
-          <img width={35} src="/Linkedin.png" alt="Linkedin"  />
+          <img width={35} src="/linkedin.png" alt="Linkedin"  />
         </li>
         <li className='hover:shadow-2xl rounded-full cursor-pointer transition duration-300 ease-in-out transform hover:scale-110'>
-          <img width={35} src="/Github.png" alt="Github"  />
+          <img width={35} src="/github.png" alt="Github"  />
         </li>
         <li className='hover:shadow-2xl rounded-full cursor-pointer transition duration-300 ease-in-out transform hover:scale-110'>
-          <img width={40} src="/Instagram.png" alt="Instagram"  />
+          <img width={40} src="/instagram.png" alt="Instagram"  />
         </li>
         <li className='hover:shadow-2xl rounded-full cursor-pointer transition duration-300 ease-in-out transform hover:scale-110'>
-          <img width={35} src="/Facebook.png" alt="Facebook"  />
+          <img width={35} src="/facebook.png" alt="Facebook"  />
         </li>
       </ul>
     </div>

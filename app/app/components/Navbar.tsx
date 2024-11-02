@@ -26,13 +26,13 @@ const Navbar: React.FC = () => {
         <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
         <li onClick={() => handleClick("/projects")} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
         <li onClick={() => handleClick("/about")} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
-        <li className="cursor-pointer hover:font-bold transition-all">
+        <li className="cursor-pointer hover:font-bold transition-all text-xl border border-white rounded-full px-2">
           <button
             onClick={(): void => {handleDownload("/Hassan_Rajput's_resume.pdf")}}
-            className="text-white bg-purple-950 rounded-full flex justify-between items-center ring-white ring-1 hover:text-xl hover:bg-purple-900"
+            className="text-white flex justify-between items-center "
           >
-            <img className="invert w-10 p-1 text-sm" src="/github.svg" alt="logo" />
-            <span className="font-bold px-2">Download Resume</span>
+            <img className=" w-8 p-1" src="/resume_image.png" alt="Resume" />
+            <span className="px-1 text-sm">Download Resume</span>
           </button>
         </li>
       </ul>
