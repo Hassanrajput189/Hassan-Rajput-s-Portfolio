@@ -7,7 +7,7 @@ export default function Home() {
     <div>
     <Navbar/>
     </div>
-    <div className="mt-5">
+    <div>
     <Info/>
     </div>
     <div className="absolute bottom-0 w-full">

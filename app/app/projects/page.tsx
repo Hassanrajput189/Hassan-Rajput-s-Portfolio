@@ -40,11 +40,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
     <Navbar />
-    <div className="flex flex-col items-center flex-grow my-16">
-      <div className="max-w-[80vw]">
-        <div className="flex flex-wrap justify-center items-center gap-20">
+    <div className="flex flex-col justify-center items-center flex-grow ">
+        <div className="flex flex-col flex-wrap justify-center items-center gap-20 lg:flex-row my-6">
           {projects.map((project, index) => (
             <Card
               onClick={() => handleNavigation(project.url)}
@@ -56,7 +55,6 @@ const Projects = () => {
             />
           ))}
         </div>
-      </div>
     </div>
     <Footer />
   </div>
@@ -64,3 +62,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
