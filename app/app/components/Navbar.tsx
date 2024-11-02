@@ -5,9 +5,17 @@ import React from 'react';
 // Define the Navbar component with React.FC (Function Component type)
 const Navbar: React.FC = () => {
 
-  const handleClick = (url: string): void => {
+  const handleClick = (url: string) : void => {
     window.location.href = url;
   }
+  const handleDownload = (filePath: string) => {
+    const link = document.createElement("a");
+    link.href = filePath;  // Use the file path passed in
+    link.download = filePath.split('/').pop() || "download";  // Extract filename or default to "download"
+    link.click();
+  };
+  
+  
 
   return (
     <nav className=" flex justify-between items-center bg-blue-600 text-white py-2 rounded-full m-4">
@@ -18,6 +26,15 @@ const Navbar: React.FC = () => {
         <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
         <li onClick={() => handleClick("/projects")} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
         <li onClick={() => handleClick("/about")} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
+        <li className="cursor-pointer hover:font-bold transition-all">
+          <button
+            onClick={(): void => {handleDownload("/Hassan_Rajput's_resume.pdf")}}
+            className="text-white bg-purple-950 rounded-full flex justify-between items-center ring-white ring-1 hover:text-xl hover:bg-purple-900"
+          >
+            <img className="invert w-10 p-1 text-sm" src="/github.svg" alt="logo" />
+            <span className="font-bold px-2">Download Resume</span>
+          </button>
+        </li>
       </ul>
     </nav>
   );

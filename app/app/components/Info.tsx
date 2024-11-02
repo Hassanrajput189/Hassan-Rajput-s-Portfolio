@@ -2,8 +2,8 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='flex flex-col justify-center items-center gap-6 '>
-      <div id='image' className='hover:shadow-2xl rounded-full cursor-pointer transition duration-300 ease-in-out transform hover:scale-105'>
+    <div className='flex flex-col justify-center items-center gap-6'>
+      <div id='image' className='hover:shadow-2xl rounded-full  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105'>
         <img  width={200} src="/profile picture.png" alt="image" />
       </div>
       <div id='description' className='w-1/2 text-lg text-slate-600'>
