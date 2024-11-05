@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
         <li onClick={() => handleClick("/projects")} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
         <li onClick={() => handleClick("/about")} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
-        <li className="cursor-pointer hover:font-bold transition-all text-xl border border-white rounded-full px-2">
+        <li className="cursor-pointer hover:font-bold transition-all text-xl border border-hite rounded-full px-2">
           <button
             onClick={(): void => {handleDownload("/Hassan_Rajput's_resume.pdf")}}
             className="text-white flex justify-between items-center "

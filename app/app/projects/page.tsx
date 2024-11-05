@@ -2,7 +2,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Card from "../components/Card";
+import Card from "../components/ProjectCard";
 
 const handleNavigation = (url:string) => {
   if (!url) {
@@ -38,9 +38,9 @@ const projects = [
   
 ];
 
-const Projects = () => {
+const page = () => {
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
     <Navbar />
     <div className="flex flex-col justify-center items-center flex-grow ">
         <div className="flex flex-col flex-wrap justify-center items-center gap-20 lg:flex-row my-6">
@@ -61,6 +61,6 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default page;
 
 

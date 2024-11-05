@@ -6,7 +6,7 @@ const Info = () => {
       <div id='image' className='hover:shadow-2xl rounded-full  cursor-pointer transition duration-300 ease-in-out transform hover:scale-105'>
         <img  width={200} src="/profile picture.png" alt="image" />
       </div>
-      <div id='description' className='w-1/2 text-lg text-slate-600'>
+      <div id='description' className='w-[80vw] md:w-1/2 text-lg text-slate-600'>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquam eum aut harum earum adipisci a vitae doloremque voluptatum facere, doloribus amet quo impedit, accusamus, ut culpa voluptatibus accusantium voluptas! Repellat, et.</p>
       </div>
       <ul id='socials' className='flex  items-center gap-6'>
