@@ -15,7 +15,7 @@ const AboutPage = () => {
   return (
     <div className="h-screen ">
       <Navbar />
-      <main className="my-10 flex flex-col items-center justify-center gap-10">
+      <main className="md:my-10 flex flex-col items-center justify-center gap-10">
         <div className="flex flex-col gap-16 items-center ">
           <AboutCard name="About Me" desc={desc} />
           <AboutCard name="Tech Stack" tech={skills} />
