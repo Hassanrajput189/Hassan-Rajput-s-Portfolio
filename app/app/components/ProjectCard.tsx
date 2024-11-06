@@ -15,7 +15,7 @@ const ProjectCard: React.FC<CardProps> = ({ image, desc, tech, name, onClick }) 
   return (
     <div
       onClick={onClick}
-      className="flex flex-col justify-between items-center gap-3 bg-gray-200 rounded-2xl w-1/2 lg:w-1/4 h-[400px] lg:h-[500px] cursor-pointer border border-black hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
+      className="flex flex-col justify-between items-center gap-3 bg-gray-200 rounded-2xl w-[80vw] lg:w-1/4 h-[400px] lg:h-[500px] cursor-pointer border border-black hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
     >
       {/* Image Section - Takes half of the card height */}
       {image &&(

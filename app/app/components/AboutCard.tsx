@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 
 interface CardProps {
@@ -10,38 +7,40 @@ interface CardProps {
   onClick?: () => void;
 }
 
-const AboutCard: React.FC<CardProps> = ({name, desc, tech,  onClick }) => {
+const AboutCard: React.FC<CardProps> = ({ name, desc, tech, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="flex flex-col justify-between items-center gap-3 bg-gray-200 rounded-2xl w-1/2  h-[400px] lg:h-[500px] cursor-pointer border border-black hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
+      className="flex flex-col  gap-5 rounded-2xl w-[90vw] lg:w-[60vw] h-auto cursor-pointer shadow-xl shadow-gray-300 p-8  transition duration-300 ease-in-out transform hover:scale-105 "
+      style={{
+        transform: 'perspective(1000px)',
+      }}
     >
-      
-      {/* Content Section */}
-      <div className="flex flex-col justify-evenly items-center gap-2 p-4 w-full h-full">
-        {/* Name Section */}
-        <div className="text-center font-bold text-xl">
-          {name}
-        </div>
+      {/* Name Section */}
+      <h2 className=" font-bold text-3xl text-gray-800 text-center">
+        {name}
+      </h2>
 
-        {/* Description Section */}
-        {desc &&(
-        <div className="text-center overflow-hidden text-ellipsis">
-          <p >{desc}</p>
+      {/* Description Section */}
+      {desc && (
+        <div className="text-lg text-gray-600 whitespace-pre-line">
+          {desc}
         </div>
-        )}
-        {/* Technologies Section */}
-        {tech && tech.length > 0 &&(
-        <div className="text-center overflow-hidden">
-          <p className="font-semibold">Technologies:</p>
-          <div className="flex justify-center items-center flex-wrap gap-1">
-            {tech.map((item, index) => (
-              <span key={index}>{item}{index < tech.length - 1 ? ', ' : ''}</span>
-            ))}
-          </div>
+      )}
+
+      {/* Technologies Section */}
+      {tech && tech.length > 0 && (
+        <div className="text-center grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+          {tech.map((item, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm hover:bg-blue-200 transition duration-300"
+            >
+              {item}
+            </span>
+          ))}
         </div>
-        )}
-      </div>
+      )}
     </div>
   );
 };
