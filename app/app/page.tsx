@@ -7,7 +7,7 @@ export default function Home() {
     <div>
     <Navbar/>
     </div>
-    <div className="md:my-8 flex-grow">
+    <div className="my-8 flex-grow">
     <Info/>
     </div>
     <div>

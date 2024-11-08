@@ -22,13 +22,7 @@ const Navbar: React.FC = () => {
     setSidebarOpen(false); // Close sidebar after navigation
   };
 
-  const handleDownload = (filePath: string) => {
-    const link = document.createElement("a");
-    link.href = filePath;
-    link.download = filePath.split('/').pop() || "download";
-    link.click();
-  };
-
+  
   const toggleSidebar = () => {
     if (isMobile) { // Only toggle sidebar in mobile view
       setSidebarOpen(!isSidebarOpen);
@@ -41,7 +35,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-blue-600 text-white py-2  px-2 md:flex md:justify-between md:items-center m-5 rounded-full w-fit md:w-full">
       {/* Logo Section */}
       <div id="logo" className="md:pl-6 cursor-pointer md:flex-none" onClick={toggleSidebar}>
-        <span className="text-3xl text-black font-bold">HR</span>
+        <span className="text-4xl text-black font-bold">HR</span>
       </div>
 
       {/* Desktop Menu */}
@@ -49,15 +43,6 @@ const Navbar: React.FC = () => {
         <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
         <li onClick={() => handleClick("/projects")} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
         <li onClick={() => handleClick("/about")} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
-        <li className="cursor-pointer hover:font-bold transition-all text-xl border border-white rounded-full px-2 w-fit">
-          <button
-            onClick={() => handleDownload("/Hassan_Rajput's_resume.pdf")}
-            className="text-white flex justify-between items-center"
-          >
-            <img className="w-8 p-1" src="/resume_image.png" alt="Resume" />
-            <span className="px-1 text-sm">Download Resume</span>
-          </button>
-        </li>
       </ul>
 
       {/* Sidebar for mobile view */}
@@ -69,15 +54,7 @@ const Navbar: React.FC = () => {
               <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
               <li onClick={() => handleClick("/projects")} className="cursor-pointer hover:font-bold transition-all text-xl">Projects</li>
               <li onClick={() => handleClick("/about")} className="cursor-pointer hover:font-bold transition-all text-xl">About</li>
-              <li className="cursor-pointer hover:font-bold transition-all text-xl border border-white rounded-full px-2 w-fit">
-                <button
-                  onClick={() => handleDownload("/Hassan_Rajput's_resume.pdf")}
-                  className="text-white flex justify-between items-center"
-                >
-                  <img className="w-8 p-1" src="/resume_image.png" alt="Resume" />
-                  <span className="px-1 text-sm">Download Resume</span>
-                </button>
-              </li>
+              
             </ul>
           </div>
         </div>
