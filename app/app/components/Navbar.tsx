@@ -35,8 +35,10 @@ const Navbar: React.FC = () => {
     }
   };
 
-  return (
-    <nav className="bg-blue-600 text-white py-2 md:rounded-full px-2 md:flex md:justify-between md:items-center ml-10 m-5 w-fit rounded-full md:w-[90vw]">
+  return ( 
+    
+    <div className='flex justify-start items-center '>
+    <nav className="bg-blue-600 text-white py-2  px-2 md:flex md:justify-between md:items-center m-5 rounded-full w-fit md:w-full">
       {/* Logo Section */}
       <div id="logo" className="md:pl-6 cursor-pointer md:flex-none" onClick={toggleSidebar}>
         <span className="text-3xl text-black font-bold">HR</span>
@@ -61,7 +63,7 @@ const Navbar: React.FC = () => {
       {/* Sidebar for mobile view */}
       {isSidebarOpen && isMobile && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-start z-10">
-          <div className="bg-blue-600 p-6 h-full w-3/4 max-w-xs rounded-lg ">
+          <div className="bg-blue-600 p-6 h-full w-3/4 max-w-xs rounded-lg border border-white">
             <button onClick={toggleSidebar} className="text-black text-2xl mb-4">X</button>
             <ul className="flex flex-col  gap-6">
               <li onClick={() => handleClick("/")} className="cursor-pointer hover:font-bold transition-all text-xl">Home</li>
@@ -81,6 +83,7 @@ const Navbar: React.FC = () => {
         </div>
       )}
     </nav>
+    </div>
   );
 };
 

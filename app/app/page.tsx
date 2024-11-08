@@ -10,7 +10,7 @@ export default function Home() {
     <div className="md:my-8">
     <Info/>
     </div>
-    <div className="absolute bottom-0 w-full">
+    <div>
     <Footer/>
     </div>
    </div>

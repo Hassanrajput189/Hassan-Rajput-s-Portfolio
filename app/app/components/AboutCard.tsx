@@ -45,4 +45,5 @@ const AboutCard: React.FC<CardProps> = ({ name, desc, tech, onClick }) => {
   );
 };
 
+
 export default AboutCard;
